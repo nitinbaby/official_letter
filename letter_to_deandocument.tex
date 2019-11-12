@@ -1,56 +1,39 @@
 %-----------------------------------------------------------------------------------------
-%								  Official Letter Format
-%									Writen by B Nitin
-%								Process Intensification Labs
-%								Cryogenic Engineering Centre
-%							Indian Institute of Technology Kharagpur
+%				 Official Letter Format
+%		                  Writen by B Nitin
+%		              Process Intensification Labs
+%		              Cryogenic Engineering Centre
+%			Indian Institute of Technology Kharagpur
 %					
 %NOTE: You may share or edit this file as you like, but you SHOULD NOT EDIT/DELETE/SUPPRESS this header
 %
 %
 %-----------------------------------------------------------------------------------------
 \documentclass[12pt]{article}
-
 \usepackage[red]{leftLetterNitin}
-%\usepackage[utf8]{inputenc}
-%\usepackage{ragged2e}
 \usepackage{fontspec}
-%
 \setmainfont{Times New Roman}
-%
-%\usepackage[left=3cm,top=2.0cm,right=1.5cm,bottom=2.7cm]{geometry}
-%
+\newcommand{\toAddress}{The Addressee,\\Blah Blah Blah Address,\\Blah Blah PINCODE}
 %%---------------------------------------------------------------------
-%\newcommand{\toAddress}{The Dean PGS\&R,\\IIT Kharagpur}
+\newcommand{\letterSubject}{This is the letter subject}
 %%---------------------------------------------------------------------
-\newcommand{\toAddress}{The Warden,\\Dr. BC Roy Hall of Residence,\\IIT Kharagpur}
+\newcommand{\letterEncl}{\quad Enclosure list goes here}
 %%---------------------------------------------------------------------
-%\newcommand{\throughAddress}{The HOC,\\Cryogenic Engineering Centre,\\IIT Kharagpur}
-%%---------------------------------------------------------------------
-%\newcommand{\supAddress}{Prof. Pavitra Sandilya (Supervisor),\\Cryogenic Engineering Centre,\\IIT Kharagpur}
-%%---------------------------------------------------------------------
-%\newcommand{\myAddress}{B Nitin,\\16CR91R04,\\Cryogenic Engineering Centre,\\IIT Kharagpur}
-%%---------------------------------------------------------------------
-\newcommand{\letterSubject}{Request for mess rebate}
-%%---------------------------------------------------------------------
-%\newcommand{\letterEncl}{\quad Approval letter of full financial assistance}
-%%---------------------------------------------------------------------
-
 \begin{document}
 %---------------------------------------------------------------------
-% 						Removing Page Number
+% 		Removing Page Number
 %---------------------------------------------------------------------
 	\thispagestyle{empty}
 %---------------------------------------------------------------------
 
 %---------------------------------------------------------------------
-% 						To Address
+% 			To Address
 %---------------------------------------------------------------------
 	\flushleft{To\\ \toAddress}
 %---------------------------------------------------------------------
 
 %---------------------------------------------------------------------
-% 						Through HOC
+% 			Through HOC
 %---------------------------------------------------------------------
 	\flushleft{Through\\ \throughAddress}
 %---------------------------------------------------------------------	
@@ -60,63 +43,57 @@
 %---------------------------------------------------------------------
 	\flushleft{Through\\ \supAddress}
 %---------------------------------------------------------------------
-
-%---------------------------------------------------------------------
-% 							Date
+% 			         Date
 %---------------------------------------------------------------------
 	\flushright{\today}
 %---------------------------------------------------------------------
 
 %---------------------------------------------------------------------
-% 							Salutation
+% 				Salutation
 %---------------------------------------------------------------------
 	\flushleft{Respected Sir,}
 %---------------------------------------------------------------------
 
 %---------------------------------------------------------------------
-% 						Subject
+% 				Subject
 %---------------------------------------------------------------------
 	\flushleft{\textbf{Sub:\quad}\letterSubject}
 %---------------------------------------------------------------------
 
 %---------------------------------------------------------------------
-% 						Main Content
+% 			Main Content
 %---------------------------------------------------------------------
 \justify
-\quad I was granted medical leave for two months(from 05-08-2019 to 05-10-2019) from the institute through proper channel (Order No. IIT/ACD/PGS\&R/F-II/2/16CR91R04 Dated: 24/07/2019). I had submitted a request with you for exempting me from mess during this period. However, I find that my mess fees (for the months of August and September, as displayed in the mess) have been calculated without taking this into account. This is a humble request to kindly correct the fees so that it does not get added up into my semester fees.
+\quad I was blah blah blah blah. Kindly do the needful. 
 
 %---------------------------------------------------------------------
 \vspace{10ex}
 %---------------------------------------------------------------------
-% 						Thanks
+% 			       Thanks
 %---------------------------------------------------------------------
 \centering{Thanking you}
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
-% 						Gratitude
+% 			   Gratitude
 %---------------------------------------------------------------------
 \flushleft{Yours sincerely,}
+%\flushleft{Yours faithfully,}
+%\flushleft{Yours obediently,}
+%\flushleft{Regards,}
 %---------------------------------------------------------------------
-
-%---------------------------------------------------------------------
-% 						Sign Space
+% 		          Sign Space
 %---------------------------------------------------------------------
 \vspace{10ex}
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
-% 						Sign Space
+% 			  Sign Space
 %---------------------------------------------------------------------
 \myAddress
 %---------------------------------------------------------------------
 \vspace{8ex}
 %---------------------------------------------------------------------
-% 						Sign Space
+% 			Sign Space
 %---------------------------------------------------------------------
-%\flushleft{\small{\textbf{Encl:}\letterEncl}}
+\flushleft{\small{\textbf{Encl:}\letterEncl}}
 %---------------------------------------------------------------------
-
-
-
-
-	
 \end{document}
