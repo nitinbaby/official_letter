@@ -1,0 +1,51 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{leftLetterNitin}[2014/08/21 Example package]
+ 
+\RequirePackage{imakeidx}
+\RequirePackage{xstring}
+\RequirePackage{xcolor}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{ragged2e}
+%\RequirePackage{fontspec}
+\RequirePackage[left=3cm,top=2.0cm,right=1.5cm,bottom=2.7cm]{geometry}
+
+%\setmainfont{Times New Roman}
+
+\definecolor{greycolour}{HTML}{525252}
+\definecolor{sharelatexcolour}{HTML}{882B21}
+\definecolor{mybluecolour}{HTML}{394773}
+\newcommand{\wordcolour}{greycolour}
+ 
+\DeclareOption{red}{\renewcommand{\wordcolour}{sharelatexcolour}}
+\DeclareOption{blue}{\renewcommand{\wordcolour}{mybluecolour}}
+\DeclareOption*{\PackageWarning{examplepackage}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+ 
+%%Numbered environment
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+\noindent \textbf{My~environment~\theexample. #1} \rmfamily}{\medskip}
+ 
+%%Important words are added to the index and printed in different colour
+\newcommand{\important}[1]
+{\IfSubStr{#1}{!}
+    {\textcolor{\wordcolour}{\textbf{\StrBefore{#1}{!}~\StrBehind{#1}{!}}}\index{#1}}
+    {\textcolor{\wordcolour}{\textbf{#1}}\index{#1}\kern-1pt}
+}
+
+
+%\newcommand{\toAddress}{The Dean of Student Affairs,\\IIT Kharagpur}
+%---------------------------------------------------------------------
+%\newcommand{\throughAddress}{Dr. Samir Dasgupta,\\Principal Medical Officer,\\BC Roy Technology Hospital,\\IIT Kharagpur}
+%---------------------------------------------------------------------
+\newcommand{\throughAddress}{The HOC,\\Cryogenic Engineering Centre,\\IIT Kharagpur}
+%---------------------------------------------------------------------
+\newcommand{\supAddress}{Prof. Pavitra Sandilya (Supervisor),\\Cryogenic Engineering Centre,\\IIT Kharagpur}
+%---------------------------------------------------------------------
+%\newcommand{\myAddress}{B Nitin,\\16CR91R04,\\Cryogenic Engineering Centre,\\IIT Kharagpur}
+%---------------------------------------------------------------------
+\newcommand{\myAddress}{B Nitin,\\16CR91R04,\\Room Number NE-06,\\Dr. BC Roy Hall of Residence,\\IIT Kharagpur}
+%---------------------------------------------------------------------
+%\newcommand{\letterSubject}{Intimation of joining the institute after medical leave}
+%---------------------------------------------------------------------
+%\newcommand{\letterEncl}{\quad Copy of Licence}
