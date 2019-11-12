@@ -6,7 +6,7 @@ Compile the *letter.tex* file using LuaTeX or XeTeX. This is required as the mai
 The following code may be used to compile the document in **Ubuntu** terminal
 
 ```
-luatex letter.tex && rm letter.aux && rm letter.log
+lualatex letter.tex && rm letter.aux && rm letter.log
 OR
 xetex letter.tex && rm letter.aux && rm letter.log
 ```
